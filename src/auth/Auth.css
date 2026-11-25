@@ -13,7 +13,6 @@ body {
     overflow: hidden;
 }
 
-/* Main Layout */
 
 .container {
     display: flex;
@@ -25,7 +24,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* Left Side */
 
 .left-content {
     flex: 1;
@@ -36,7 +34,6 @@ body {
     padding-top: 10px;
 }
 
-/* Logo */
 
 .logo {
     display: flex;
@@ -52,7 +49,6 @@ body {
     font-size: 34px;
 }
 
-/* Hero Section */
 
 .hero {
     margin-top: 100px;
@@ -76,7 +72,6 @@ body {
     max-width: 500px;
 }
 
-/* Features */
 
 .features {
     display: flex;
@@ -109,7 +104,6 @@ body {
     color: #cbd5e1;
 }
 
-/* Right Side Card */
 
 .login-card {
     width: 400px;
@@ -122,7 +116,6 @@ body {
     margin-right: 50px;
 }
 
-/* Tabs */
 
 .tabs {
     display: flex;
@@ -146,7 +139,6 @@ body {
     border-bottom: 2px solid #2563eb;
 }
 
-/* Headings */
 
 .login-card h2 {
     font-size: 28px;
@@ -158,7 +150,6 @@ body {
     margin-bottom: 24px;
 }
 
-/* Inputs */
 
 .input-box {
     position: relative;
@@ -192,7 +183,6 @@ body {
     left: 16px;
 }
 
-/* Options */
 
 .options {
     display: flex;
@@ -220,7 +210,6 @@ body {
     text-decoration: underline;
 }
 
-/* Button */
 
 .login-btn {
     width: 100%;
@@ -239,7 +228,6 @@ body {
     background: #1d4ed8;
 }
 
-/* Divider */
 
 .divider {
     text-align: center;
@@ -267,7 +255,6 @@ body {
     right: 0;
 }
 
-/* Social Buttons */
 
 .social-buttons {
     display: flex;
@@ -302,7 +289,6 @@ body {
     color: #1877F2;
 }
 
-/* Bottom Text */
 
 .signup-text {
     text-align: center;
