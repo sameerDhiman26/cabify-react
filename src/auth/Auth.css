@@ -328,11 +328,6 @@ body {
     gap: 10px;
 }
 
-.google-btn i {
-    color: #4285F4;
-    font-size: 18px;
-}
-
 .google-btn:hover {
-    background: #f5f5f5;
+    transform: scale(1.03);
 }
