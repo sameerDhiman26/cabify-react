@@ -1,5 +1,7 @@
 
 import { useState } from "react";
+import { auth, googleProvider } from "../../firebase";
+import { signInWithPopup } from "firebase/auth";
 
 function Login({ showSignup }) {
 
@@ -32,6 +34,57 @@ function Login({ showSignup }) {
         } catch (error) {
             console.log(error);
             alert("Server error");
+        }
+    }
+
+    async function googleLogin() {
+
+        try {
+            let result = await signInWithPopup(auth, googleProvider);
+
+            let googleUser = result.user;
+
+            let response = await fetch("http://localhost:3000/users");
+            let users = await response.json();
+
+            let existingUser = users.find(
+                user => user.email === googleUser.email
+            );
+
+            let user;
+
+            if (existingUser) {
+                user = existingUser;
+            } else {
+
+                let newUser = {
+                    name: googleUser.displayName,
+                    email: googleUser.email,
+                    photoURL: googleUser.photoURL,
+                    authProvider: "google"
+                };
+
+                let postResponse = await fetch("http://localhost:3000/users", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(newUser)
+                });
+
+                user = await postResponse.json();
+            }
+
+            localStorage.setItem(
+                "currentUser",
+                JSON.stringify(user)
+            );
+
+            alert("Google login successful");
+
+        } catch (error) {
+            console.log(error);
+            alert("Google login failed");
         }
     }
 
@@ -71,6 +124,19 @@ function Login({ showSignup }) {
                     Login
                 </button>
             </form>
+
+            <div className="divider">
+                <span>OR</span>
+            </div>
+
+            <button
+                type="button"
+                className="google-btn"
+                onClick={googleLogin}
+            >
+                <i className="fa-brands fa-google"></i>
+                Continue with Google
+            </button>
 
             <p className="signup-text">
                 Don't have an account?
