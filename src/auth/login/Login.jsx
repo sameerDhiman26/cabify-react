@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 function Login({ showSignup }) {
 
     const navigate = useNavigate();
@@ -39,6 +40,7 @@ function Login({ showSignup }) {
             alert("Server error");
         }
     }
+
 
 
     return (
@@ -82,7 +84,6 @@ function Login({ showSignup }) {
                 <span>OR</span>
             </div>
 
-           
 
             <p className="signup-text">
                 Don't have an account?

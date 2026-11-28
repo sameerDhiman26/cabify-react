@@ -1,11 +1,6 @@
 {
   "users": [
-    {
-      "name": "Gagandeep Singh",
-      "email": "gs8091420224@gmail.com",
-      "password": "Gagan@1322",
-      "id": "sQ8Zuh_rTwA"
-    }
+
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }
