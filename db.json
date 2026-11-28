@@ -3,9 +3,8 @@
     {
       "name": "Gagandeep Singh",
       "email": "gs8091420224@gmail.com",
-      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocKMHL4x891UwDSDJ-0U-l4zKq13w7ZwLZgT7npmL6rg5DpgbQ=s96-c",
-      "authProvider": "google",
-      "id": "ULn4wtgpWT0"
+      "password": "Gagan@1322",
+      "id": "sQ8Zuh_rTwA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
